@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+/*const eqArrays = function(array1, array2) {
   if (array1 === undefined ||
     array2 === undefined ||
     array1.length  !== array2.length) {
@@ -18,7 +18,7 @@ const assertArraysEqual = function(arr1, arr2) {
   } else {
     console.log("🤗These arrays are the same.");
   }
-};
+};*/
 
 const letterPositions = function(sentence) {
   let result = {};
@@ -35,10 +35,12 @@ const letterPositions = function(sentence) {
   return result;
 }
 
+module.exports(letterPositions);
+/*
 // Test case for string 'hello'
 const finalResult = letterPositions('hello');
 
 assertArraysEqual(finalResult['h'], [0]);
 assertArraysEqual(finalResult['e'], [1]);
 assertArraysEqual(finalResult['l'], [2, 3]);
-assertArraysEqual(finalResult['o'], [4]);
+assertArraysEqual(finalResult['o'], [4]);*/

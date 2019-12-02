@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+/*const eqArrays = function(array1, array2) {
   if (array1 === undefined ||
     array2 === undefined ||
     array1.length  !== array2.length) {
@@ -18,7 +18,7 @@ const assertArraysEqual = function(arr1, arr2) {
   } else {
     console.log("🤗These arrays are the same.");
   }
-};
+};*/
 
 const without = function(source, itemsToRemove) {
   let newArr = [];
@@ -31,5 +31,7 @@ const without = function(source, itemsToRemove) {
   return newArr;
 };
 
-assertArraysEqual(without([1,2,3], [1]), [2,3]);
-assertArraysEqual(without(['1','2','3'], [1, 2, '3']), ['1','2']);
+module.exports = without;
+
+//assertArraysEqual(without([1,2,3], [1]), [2,3]);
+//assertArraysEqual(without(['1','2','3'], [1, 2, '3']), ['1','2']);

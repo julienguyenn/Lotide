@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+/*const eqArrays = function(array1, array2) {
   if (array1 === undefined ||
     array2 === undefined ||
     array1.length  !== array2.length) {
@@ -18,9 +18,10 @@ const assertArraysEqual = function(arr1, arr2) {
   } else {
     console.log("🤗These arrays are the same.");
   }
-};
+};*/
 
-const flatten = function(array) {
+// Looping
+/*const flatten = function(array) {
   let newArr = [];
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
@@ -34,7 +35,38 @@ const flatten = function(array) {
   }
   console.log(newArr);
   return newArr;
-}
+}*/
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2 , 3, 4, 5, 6]);
+/*const flatten = function (array) {
+  let flattenedArray = [];
+  for (let element of array) {
+    if (Array.isArray(element)) {
+      console.log('pushed')
+      flattenedArray.push(...flatten(element));
+    } else {
+      // let placeholder = array.splice(array.indexOf(element), 1);
+      flattenedArray.push(element);//push(...placeholder);
+    }
+  }
+  console.log(flattenedArray, 'flattened');
+  return flattenedArray;
+};*/
+
+const flatten = function (array) {
+  let newArray = [];
+  for (let element of array) {
+    if (!Array.isArray(element)) {
+      newArray.push(element);
+    } else {
+      newArray.push(...flatten(element));
+    }
+  }
+  return newArray;
+};
+
+console.log(flatten([1, [1, 2, 3]]));
+
+module.exports = flatten;
+
+//assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2 , 3, 4, 5, 6]);
 
